@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Coin Saver | Home</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <span>Coin Saver</span>
+            <ul>
+                <li><a href="goal.html">Goal</a></li>
+                <li><a href="savings.html">Savings</a></li>
+                <li><a href="#" id="toggleSidebar">&#9776</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Motivational Quote Here</h1>
+            <p>See it through the end</p> 
+        </div>
+    </div>
+    
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleSidebar.addEventListener('click', function(event) {
+            event.preventDefault();
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!sidebar.contains(event.target) && !toggleSidebar.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

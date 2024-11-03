@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Saver | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="top-bar">
+        <span>Coin Saver</span>
+    </header>
+    
+    <div class="box">
+        <div class="container">
+            <header>Sign Up</header>
+            <form id="signup-form" action="index.html" method="GET">
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Username" required>
+                </div>
+                
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Password" id="password" required>
+                    <i class="ri-eye-fill login__icon" id="togglePassword"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="contact number" class="input" placeholder="Contact No." required>
+                </div>
+
+                <button type="submit" class="submit">Create Account</button>
+                <div class="create">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('ri-eye-line');
+            this.classList.toggle('ri-eye-fill');
+        });
+    </script>
+</body>
+</html>
